@@ -137,7 +137,7 @@ h1{
 }
 
 
-/*--------------------------------------------------------- Home (Faq) ---------------------------------------------------------*/
+/*--------------------------------------------------------- Home ---------------------------------------------------------*/
 
 .Contenido{
     width: 95%;
@@ -284,6 +284,7 @@ h2, .pExplore, .info p {
     top: 0;
     left: 0;
     z-index: 1;
+    border-radius: 12px;
 }
 
 .textGuide {
@@ -306,10 +307,9 @@ h2, .pExplore, .info p {
     margin-bottom: 15px;
 }
 
-
-
-
-/*--------------------------------------------------------- Home (Flor) ---------------------------------------------------------*/
+.categories h2{
+    text-align: center;
+}
 
 .catGrid{
     display: grid;
@@ -321,7 +321,6 @@ h2, .pExplore, .info p {
 .card1 {
     position: relative;
     border-radius: 10px;
-    margin: 0.5rem;
 }
 
 .card1::before {
@@ -356,6 +355,26 @@ h2, .pExplore, .info p {
 .card-img{
     border-radius: 10px;
 }
+
+.container-home h2{
+    text-align: center;
+}
+
+@media screen and (max-width: 767px) {
+    .catGrid{
+        grid-template-columns: auto;
+    }
+}
+    
+@media screen and (max-width: 1024px) {
+    .container-home .row{
+            display: flex;
+            margin: 3rem auto;
+            justify-content: center;
+        }
+    }
+
+
 
 /*--------------------------------------------------------- Footer ---------------------------------------------------------*/
 
