@@ -30,21 +30,21 @@ if ($filtro) {
         <div class="carousel-item active">
             <img src="img/productos/productos-4.jpeg" class="d-block w-100" alt="Nuestros productos 1">
             <div class="carousel-caption d-none d-md-block">
-                <h5>Descubre Nuestra Colección</h5>
+                <p class="fs-5 fw-bold">Descubre Nuestra Colección</p>
                 <p>Descripción: Explora nuestra selección cuidadosamente curada de productos naturales, diseñados para nutrir tu piel, cabello y cuerpo de manera saludable y sostenible.</p>
             </div>
         </div>
         <div class="carousel-item">
             <img src="img/productos/productos-3.jpeg" class="d-block w-100" alt="Nuestros productos 2">
             <div class="carousel-caption d-none d-md-block">
-                <h5>Explora Nuestra Gama de Productos</h5>
+                <p class="fs-5 fw-bold">Explora Nuestra Gama de Productos</p>
                 <p>Productos creados con ingredientes orgánicos y libres de químicos agresivos, nuestros productos son una opción consciente para aquellos que buscan una belleza más saludable y respetuosa con el medio ambiente.</p>
             </div>
         </div>
         <div class="carousel-item">
             <img src="img/productos/productos-2.jpeg" class="d-block w-100" alt="Nuestros productos 3">
             <div class="carousel-caption d-none d-md-block">
-                <h5>Experimenta el Poder Transformador de la Naturaleza</h5>
+                <p class="fs-5 fw-bold">Experimenta el Poder Transformador de la Naturaleza</p>
                 <p>Déjate seducir por la belleza de la naturaleza con nuestra línea de productos naturales inspirados en los elementos más puros de la tierra.</p>
             </div>
         </div>
@@ -57,6 +57,7 @@ if ($filtro) {
         <div class="row">
             <div class="col-md-3">
                 <div class="container mt-5">
+
                     <div class="accordion" id="accordionExample">
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="ingredientesHeading">
@@ -107,6 +108,20 @@ if ($filtro) {
                                 </div>
                             </div>
                         </div>
+                        <div class="accordion-item">
+                        <h2 class="accordion-header" id="ofertasHeading">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"  data-bs-target="#filtroCollapse" aria-expanded="false" aria-controls="filtroCollapse">
+                                    Quitar Filtro
+                                </button>
+                            </h2>
+                            <div id="filtroCollapse" class="accordion-collapse collapse" aria-labelledby="quitarFiltro" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <ul class="list-group">
+                                        <a href="index.php?sec=productos" class="list-group-item">Quitar Filtro</a>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -148,8 +163,12 @@ if ($filtro) {
                     <div class="part-2">
                         <h3 class="product-title"><?= $producto->getNombre() ?></h3>
                         <p class="product-description"><?= $producto->getDescripcion() ?></p>
-                        <h4 class="product-old-price">$<?= $producto->precioFormateado() ?></h4>
-                        <h4 class="product-price">$<?= $producto->precioDescuento() ?></h4>
+                        <div class="d-flex">
+                            <p class="product-old-price me-2">
+                                <del>$<?= $producto->precioFormateado() ?></del>
+                            </p>
+                            <p class="product-price fw-bold">$<?= $producto->precioDescuento() ?></p>
+                        </div>
                     </div>
                 </div>
             </div>
