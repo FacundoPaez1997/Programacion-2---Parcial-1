@@ -371,7 +371,7 @@ h2, .pExplore, .info p {
             display: flex;
             margin: 3rem auto;
             justify-content: center;
-        }
+        }.sectionProducts .single-product .part-2 .product-old-price
     }
 
 
@@ -652,9 +652,9 @@ a:hover {
 
 .sectionProducts .single-product .part-2 .product-old-price {
     position: relative;
-    padding: 0 7px;
     margin-right: 2px;
     opacity: 0.6;
+    width: fit-content;
 }
 
 .product-description {
